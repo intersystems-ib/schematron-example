@@ -1,0 +1,9 @@
+    // Unexpire passwords to simplify dev mode. Comment these two lines for Production use
+    zn "%SYS"
+    Do ##class(Security.Users).UnExpireUserPasswords("*")
+
+    // load example class to USER namespace
+    zn "USER"
+    do $SYSTEM.OBJ.Load("/opt/irisapp/dc.schematron.cls", "ck", .errorlog, 1) 
+    
+    halt

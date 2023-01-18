@@ -1,2 +1,16 @@
 # schematron-example
-Ejemplo de validación de documentos XML con Schematron mediante Python
+XML Schematron example using Python
+
+# Setup
+```
+git clone https://github.com/intersystems-ib/schematron-example.git
+docker-compose build
+docker-compose up -d
+````
+
+# Example execution
+```
+zn "USER"
+d ##class(dc.schematron).simpleTest()
+````
+
